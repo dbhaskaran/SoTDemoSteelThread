@@ -33,8 +33,10 @@ In the real world, this type of dependency will of course be available via a pro
 ## Build
 
 <pre>
-$ mvn clean package
+$ mvn clean install
 </pre>
+
+**Note** : Yes, install. The way the project is currently configured, this is required in order to run it easily.
 
 ## Run Demo
 
@@ -44,7 +46,12 @@ Follow the directions in the bottom half of the [Kafka quick start](https://cwik
 
 Name the topic **event_in** instead of **mytopic**
 
-### Run the storm demo
+### Run the storm system
+<pre>
+$ bash target/bin/runstorm
+</pre>
+
+### Start simulated event generator
 <pre>
 $ bash target/bin/eventsim
 </pre>
