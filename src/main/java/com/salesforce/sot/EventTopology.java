@@ -27,7 +27,7 @@ public class EventTopology {
 
         LocalCluster cluster = new LocalCluster();
         cluster.submitTopology("test", conf, builder.createTopology());
-        Utils.sleep(30000);
+        Utils.sleep(180000);
         cluster.killTopology("test");
         cluster.shutdown();
     }

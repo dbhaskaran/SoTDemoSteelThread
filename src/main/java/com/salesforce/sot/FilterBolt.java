@@ -31,7 +31,13 @@ public class FilterBolt extends BaseRichBolt {
         String event = tuple.getString(0);
 
         // Filter out all events < 2500
-        int eventId = Integer.parseInt(event.split(":")[1]);
+        System.out.println("[FILTER BOLT] : Processing event => " + event);
+        int eventId = 0;
+        try {
+            eventId = Integer.parseInt(event.split(":")[1]);
+        } catch (Exception e) {
+            System.out.println("[FILTER BOLT] : Malformed event => " + event);
+        }
         if (eventId > 2500) {
             collector.emit(tuple, new Values(event));
         }

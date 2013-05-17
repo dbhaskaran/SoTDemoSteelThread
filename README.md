@@ -1,5 +1,15 @@
 ## Purpose
 
+A very simple starter project intended for learning / demo purposes.
+
+Demonstrates the following flow:
+
+- Send events to a Kafka queue for persistent buffering
+- Drain events from Kafka into Storm
+- Execute a Storm topology with 2 bolts:
+   - First one filters out every event with a number greater than 2500.
+   - Second bolt takes the filtered results and prints them to the screen.
+
 ## Prerequisites
 
 - Java 7

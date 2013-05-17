@@ -53,6 +53,10 @@
                     <programs>
                         <program>
                             <mainClass>com.salesforce.sot.EventTopology</mainClass>
+                            <name>runstorm</name>
+                        </program>
+                        <program>
+                            <mainClass>com.salesforce.sot.EventGenerator</mainClass>
                             <name>eventsim</name>
                         </program>
                     </programs>

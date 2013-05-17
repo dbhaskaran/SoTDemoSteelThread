@@ -27,7 +27,7 @@ public class PrinterBolt extends BaseRichBolt {
     @Override
     public void execute(Tuple tuple) {
         String event = tuple.getString(0);
-        System.out.println("Saving event : " + event);
+        System.out.println("[PRINTER BOLT] : Saving event => " + event);
     }
 
     @Override
